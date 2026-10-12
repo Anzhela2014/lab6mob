@@ -1,17 +1,39 @@
-# my_app_rezkam
+# Приложение «Цитата дняЯЯ» (Лабa работа №6)
 
-A new Flutter project.
+### Описание проекта
+Интерактивное Flutter-приложение, которое при нажатии на кнопку показывает случайную мотивирующую цитату из заранее подготовленного списка. Каждая цитата содержит изображение
 
-## Getting Started
+### Автор
+* **ФИО:** Резник Каменнова
+* **Группа:** ИСП-242
+* **Дата сдачи:** 12.10.2026
 
-This project is a starting point for a Flutter application.
+### Стек технологий и версии
+* **Flutter:** 3.35+
+* **Dart:** 3.x
+* **Платформа:** Web (Google Chrome)
+* **IDE:** VS Code
 
-A few resources to get you started if this is your first Flutter project:
+### Скриншот приложения
+![Интерфейс приложения](img/step6_Резкам.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Структура проекта (папка lib/)
+* `main.dart` — точка входа в приложение, инициализация MaterialApp, отключение debug-баннера.
+* `quote_home.dart` — главный экран приложения (StatefulWidget). Содержит логику генерации случайных чисел (Random), хранит список цитат и управляет градиентным фоном.
+* `quote_card.dart` — StatelessWidget для красивого отображения текста цитаты и автора с полупрозрачной подложкой.
+* `quote_image.dart` — StatelessWidget для отображения и скругления картинок-ресурсов (assets).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Как запустить проект
+```bash
+git clone <ссылка_на_репозиторий>
+cd my_app_rezkam
+flutter pub get
+flutter run -d chrome
+```
+
+### Что изучили
+1. Закрепили навыки построения интерфейсов с помощью дерева виджетов.
+2. Научились разделять код на независимые файлы-компоненты для улучшения читаемости.
+3. Освоили управление состоянием экрана с помощью `StatefulWidget` и функции `setState()`.
+4. Научились подключать и использовать статические ресурсы (изображения) через `pubspec.yaml`.
+5. Попрактиковались в работе с Git (коммиты, ветки) и публикации кода на GitHub.

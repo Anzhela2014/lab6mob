@@ -1,17 +1,29 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
+
 class QuoteHome extends StatefulWidget {
   const QuoteHome({super.key});
   @override
   State<QuoteHome> createState() =>
       _QuoteHomeState();
 }
+
 class _QuoteHomeState extends State<QuoteHome> {
   // Список только из текста цитаты и картинки
   final List<Map<String, String>> _quotes = [
-    {'text': 'Лучший способ предсказать будущее — создать его.','img': 'assets/images/quote1.jpg',},
-    {'text': 'Успех — это способность идти от неудачи к неудаче.','img': 'assets/images/quote2.jpg',},
-    {'text': 'Сложнее всего начать действовать, остальное — упорство.','img': 'assets/images/quote3.jpg',},
+    {
+      'text': 'Лучший способ предсказать будущее — создать его.',
+      'img': 'assets/images/quote1.jpg',
+    },
+    {
+      'text': 'Успех — это способность идти от неудачи к неудаче.',
+      'img': 'assets/images/quote2.jpg',
+    },
+    {
+      'text': 'Сложнее всего начать действовать, остальное — упорство.',
+      'img': 'assets/images/quote3.jpg',
+    },
   ];
   int _index = 0;
   void _nextQuote() {
@@ -19,6 +31,7 @@ class _QuoteHomeState extends State<QuoteHome> {
       _index = Random().nextInt(_quotes.length);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,12 +53,12 @@ class _QuoteHomeState extends State<QuoteHome> {
             const Text(
               'ЦИТАТА ДНЯ',
               style: TextStyle(
-                fontSize: 26,
+                fontSize: 32,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 32),
             Image.asset(
               _quotes[_index]['img']!,
               width: 220,

@@ -9,18 +9,9 @@ class QuoteHome extends StatefulWidget {
 class _QuoteHomeState extends State<QuoteHome> {
   // Список только из текста цитаты и картинки
   final List<Map<String, String>> _quotes = [
-    {
-      'text': 'Лучший способ предсказать будущее — создать его.',
-      'img': 'assets/images/quote1.jpg',
-    },
-    {
-      'text': 'Успех — это способность идти от неудачи к неудаче.',
-      'img': 'assets/images/quote2.jpg',
-    },
-    {
-      'text': 'Сложнее всего начать действовать, остальное — упорство.',
-      'img': 'assets/images/quote3.jpg',
-    },
+    {'text': 'Лучший способ предсказать будущее — создать его.','img': 'assets/images/quote1.jpg',},
+    {'text': 'Успех — это способность идти от неудачи к неудаче.','img': 'assets/images/quote2.jpg',},
+    {'text': 'Сложнее всего начать действовать, остальное — упорство.','img': 'assets/images/quote3.jpg',},
   ];
   int _index = 0;
   void _nextQuote() {
